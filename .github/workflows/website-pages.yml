@@ -1,16 +1,7 @@
 name: Website Pages
 
-# 官网是独立静态站点，只发布 apps/website/dist，不触发 Renewlet 产品镜像或 Worker 部署。
+# 项目介绍站仅手动发布，不随 Renewlet 应用更新自动部署。
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "apps/website/**"
-      - "package.json"
-      - "pnpm-lock.yaml"
-      - "pnpm-workspace.yaml"
-      - ".github/workflows/website-pages.yml"
   workflow_dispatch:
 
 permissions:
